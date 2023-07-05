@@ -4,7 +4,7 @@ prettier = pnpm exec prettier --ignore-path .eslintignore
 typecheck = pnpm exec tsc --noEmit
 
 node_modules: package.json pnpm-lock.yaml
-ifeq ($(MAKE_YARN_FROZEN_LOCKFILE), 1)
+ifeq ($(MAKE_PNPM_FROZEN_LOCKFILE), 1)
 	pnpm install --frozen-lockfile
 else
 	pnpm install
